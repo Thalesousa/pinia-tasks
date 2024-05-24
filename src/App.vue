@@ -6,18 +6,10 @@
       <h1>Pinia Tasks</h1>
     </header>
 
-    <!-- task list -->
-
-    <div class="task-list">
-      <div v-for="task in taskStore.tasks" :key="task.id">
-        <TaskDetails :task="task" />
-      </div>
-    </div>
+    <TaskList />
   </main>
 </template>
 
 <script setup>
-import TaskDetails from './components/TaskDetails.vue';
-import { useTaskStore } from './stores/TaskStore';
-const taskStore = useTaskStore();
+import TaskList from './components/TaskList/TaskList.vue';
 </script>
