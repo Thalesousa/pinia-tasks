@@ -1,4 +1,4 @@
-const { defineStore } = require('pinia');
+import { defineStore } from 'pinia';
 
 export const useTaskStore = defineStore('taskStore', {
   state: () => ({
