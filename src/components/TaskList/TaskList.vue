@@ -1,8 +1,10 @@
 <template>
-  <!-- task list -->
+  <!-- form -->
+  <div class="new-task-form">
+    <TaskForm />
+  </div>
 
   <!-- filter -->
-
   <nav class="filter">
     <button @click="filter = 'all'">All tasks</button>
     <button @click="filter = 'fav'">Fav tasks</button>
@@ -25,8 +27,9 @@
 
 <script setup>
 import { ref } from 'vue';
-import TaskDetails from '../TaskDetails/TaskDetails.vue';
 import { useTaskStore } from '../../stores/TaskStore';
+import TaskForm from '../TaskForm/TaskForm.vue';
+import TaskDetails from '../TaskDetails/TaskDetails.vue';
 const taskStore = useTaskStore();
 const filter = ref('all');
 </script>
